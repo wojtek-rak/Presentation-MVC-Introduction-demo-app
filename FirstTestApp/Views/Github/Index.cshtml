@@ -1,0 +1,20 @@
+﻿@model FirstTestApp.Models.GithubResultModel
+@*@model System.Reflection.PropertyInfo[]*@
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h2>Index</h2>
+<table>
+@foreach (var property in ViewData.ModelMetadata.Properties)
+{
+    <div class="hello">
+        <tr>
+            <td style="min-width:150px">@(property.DisplayName ?? property.PropertyName)</td>
+            <td style="min-width:150px">@Html.Display(property.PropertyName)</td>
+
+        </tr>
+    </div>
+}
+
