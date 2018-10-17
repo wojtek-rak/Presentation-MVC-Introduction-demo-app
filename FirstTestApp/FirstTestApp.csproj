@@ -16,6 +16,18 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\css\site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\table.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\table.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\GithubViewModel.cs" />
+  </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
   </Target>
 

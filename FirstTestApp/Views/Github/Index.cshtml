@@ -1,20 +1,59 @@
-﻿@model FirstTestApp.Models.GithubResultModel
+﻿@*@model FirstTestApp.Models.GithubViewModel*@
+@model FirstTestApp.Models.GithubResultModel
 @*@model System.Reflection.PropertyInfo[]*@
 @{
     ViewData["Title"] = "Index";
 }
 
-
 <h2>Index</h2>
-<table>
-@foreach (var property in ViewData.ModelMetadata.Properties)
-{
-    <div class="hello">
-        <tr>
-            <td style="min-width:150px">@(property.DisplayName ?? property.PropertyName)</td>
-            <td style="min-width:150px">@Html.Display(property.PropertyName)</td>
 
-        </tr>
-    </div>
+@using (Html.BeginForm("Index", "Github", FormMethod.Post))
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                User Name: <input type="text" name="UserName" id="UserName" />
+            </th>
+
+            <th>
+                Repository Name: <input type="text" name="RepositoryName" id="RepositoryName" />
+            </th>
+            <th>
+                <input type="submit" value="Login" />
+            </th>
+
+    </thead>
+</table>
 }
 
+
+@if (Model != null)
+{
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Ktoś
+                    </th>
+                    <th>
+                        Coś
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var property in ViewData.ModelMetadata.Properties)
+            {
+
+                <tr>
+                    <td class="name">@(property.DisplayName ?? property.PropertyName)</td>
+                    <td style="min-width:150px">@Html.Display(property.PropertyName)</td>
+                </tr>
+
+            }
+        </table>
+    </div>
+}
