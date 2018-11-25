@@ -12,7 +12,7 @@ namespace FirstTestApp
 {
     public static class GithubApi
     {
-        public static string GetApi(string userName, string repostioryName)
+        public static string GetJson(string userName, string repostioryName)
         {
             string url = "https://api.github.com/repos/" + userName + "/" + repostioryName;
             String htmlString;

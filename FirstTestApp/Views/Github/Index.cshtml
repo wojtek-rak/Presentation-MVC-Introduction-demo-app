@@ -9,17 +9,17 @@
 {
     <table class="table">
         <thead>
-            <tr>
-                <th>
-                    User Name: <input type="text" name="UserName" id="UserName" />
-                </th>
-                <th>
-                    Repository Name: <input type="text" name="RepositoryName" id="RepositoryName" />
-                </th>
-                <th>
-                    <input type="submit" value="Submit" />
-                </th>
-            </tr>
+            @*<tr>
+                    <th>
+                        User Name: <input type="text" name="UserName" id="UserName" />
+                    </th>
+                    <th>
+                        Repository Name: <input type="text" name="RepositoryName" id="RepositoryName" />
+                    </th>
+                    <th>
+                        <input type="submit" value="Submit" />
+                    </th>
+                </tr>*@
         </thead>
     </table>
 }
@@ -29,7 +29,7 @@
 
 
     <table class="table">
-        <thead>
+        @*<thead>
             <tr>
                 <th>
                     Nazwa
@@ -39,40 +39,44 @@
                 </th>
                 <th></th>
             </tr>
-        </thead>
+            </thead>*@
+
         @*<tr>
-            <td>@Html.LabelFor(x => x.full_name)</td>
-            <td>@Model.full_name</td>
-        </tr>
-        <tr>
-            <td>@Html.LabelFor(x => x.description)</td>
-            <td>@Model.description</td>
-        </tr>
-        <tr>
-            <td>@Html.LabelFor(x => x.clone_url)</td>
-            <td>@Model.clone_url</td>
-        </tr>
-        <tr>
-            <td>@Html.LabelFor(x => x.language)</td>
-            <td>@Model.language</td>
-        </tr>
-        <tr>
-            <td>@Html.LabelFor(x => x.open_issues_count)</td>
-            <td>@Model.open_issues_count</td>
-        </tr>
-        <tr>
-            <td>@Html.LabelFor(x => x.watchers)</td>
-            <td>@Model.watchers</td>
-        </tr>*@
+                <td>@Html.LabelFor(x => x.full_name)</td>
+                <td>@Model.full_name</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.description)</td>
+                <td>@Model.description</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.clone_url)</td>
+                <td>@Model.clone_url</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.language)</td>
+                <td>@Model.language</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.open_issues_count)</td>
+                <td>@Model.open_issues_count</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(x => x.watchers)</td>
+                <td>@Model.watchers</td>
+            </tr>*@
 
         @*@foreach (var property in ViewData.ModelMetadata.Properties)
-        {
-            <tr>
-                <td class="name">@(property.DisplayName ?? property.PropertyName)</td>
-                <td>@Html.Display(property.PropertyName)</td>
-            </tr>
-        }*@
+            {
+                <tr>
+                    <td class="name">@(property.DisplayName ?? property.PropertyName)</td>
+                    <td>@Html.Display(property.PropertyName)</td>
+                </tr>
+            }*@
 
     </table>
 
 }
+
+
+@*@ViewBag.Counter*@

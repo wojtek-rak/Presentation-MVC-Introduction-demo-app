@@ -27,7 +27,7 @@ namespace FirstTestApp.Controllers
             string repositoryName = inputModel.RepositoryName;
 
             var mod = new GithubResultModel();
-            var json = GithubApi.GetApi(userName, repositoryName);
+            var json = GithubApi.GetJson(userName, repositoryName);
             GithubResultModel githubModel = null;
             try
             {
@@ -40,8 +40,11 @@ namespace FirstTestApp.Controllers
                 throw ex;
                 //return View("Error", new ErrorViewModel { ExMessage = ex.Message, RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
             }
+            
             return View(githubModel);
         }
 
     }
 }
+
+//ViewBag.Counter = 10;
